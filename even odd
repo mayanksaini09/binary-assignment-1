@@ -1,27 +1,18 @@
 #include<stdio.h>
 int main(){
-    int size,evenSize = 0,oddSize = 0;
+    int size,evenSum = 0,oddSum = 0;
     printf("Size: ");
     scanf("%d",&size);
     int arr[size];
     printf("Enter numbers:\n");
     for(int i = 0;i < size;i++)
         scanf("%d",&arr[i]);
-    int even[size],odd[size];
     for(int i = 0;i < size;i++){
-        if(arr[i] % 2 == 0){
-            even[evenSize] = arr[i];
-            evenSize++;
-        }
-        else{
-            odd[oddSize] = arr[i];
-            oddSize++;
-        }
+        if(arr[i] % 2 == 0)
+            evenSum += arr[i];
+        else
+            oddSum += arr[i];
     }
-    printf("Even number are:-\n");
-    for(int i = 0;i < evenSize;i++)
-        printf("%d\t",even[i]);
-    printf("\nOdd numbers are:-\n");
-    for(int i = 0;i < oddSize;i++)
-        printf("%d\t",odd[i]);
+    printf("Sum even numbers is:%d",evenSum);
+    printf("Sum odd numbers is:%d",oddSum);
 }
