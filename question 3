@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+	float pen, pencil, eraser, total;
+	printf ("Cost of pen: ");
+	scanf ("%f",&pen);
+	printf ("Cost of pencil: ");
+	scanf ("%f",&pencil);
+	printf ("Cost of eraser: ");
+	scanf ("%f",&eraser);
+	total = (pen+pencil+eraser+((pen+pencil+eraser)*18)/100);
+	printf ("Your total bill is:%f", total);
+}
